@@ -1,10 +1,3 @@
-/**
- * Portfolio Stylesheet
- * Clean, modern design with dark/light mode support
- * Based on Apple-inspired design principles
- */
-
-/* ======= CSS Variables & Theme System ======= */
 :root {
 
     /* Light Theme Colors */
@@ -566,29 +559,29 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: auto; /* keeps it compact */
+    width: auto; 
     font-size:16px;
 }
 .api-cards {
-    padding: 1.5rem 0;                 /* مساحة عمودية معقولة */
+    padding: 1.5rem 0;               
     background-color: var(--background);
 }
 
 .api-container {
-    max-width: 700px;        /* يخليه بحجم جميل */
-    margin-left: 150px;          /* يصطف لليسار */
-    margin-right: auto;      /* يمنعه من التمركز */
-    display: block;          /* يمنع التوزيع على أعمدة */
+    max-width: 700px;        
+    margin-left: 150px;       
+    margin-right: auto;    
+    display: block;       
 }
 
 .Today-Insight {
-    width: 1170px;      /* حجم على قد المحتوى */
+    width: 1170px;     
     padding: 1.25rem 1.5rem;
     border-radius: 16px;
 }
 
 .card-header h3 {
-    font-size: 1rem;                   /* بدل 4px */
+    font-size: 1rem;                  
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
