@@ -1,6 +1,3 @@
-
-
-
 // ============================
 // Dynamic Year in Footer
 // ============================
@@ -10,18 +7,18 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // ============================
 // Dark Mode Toggle (with persistence)
 // ============================
-const toggle = document.getElementById('themeToggle');   // Button element
-const root = document.documentElement;                   // <html> element
+const toggle = document.getElementById('themeToggle');  
+const root = document.documentElement;                
 
 // Apply saved theme on load
 if (localStorage.getItem('theme') === 'dark') {
     root.classList.add('dark');
-    toggle.textContent = '☀️';  // Switch icon to sun if dark mode is active
+    toggle.textContent = '☀️'; 
 }
 
 // Toggle dark mode on button click
 toggle.addEventListener('click', () => {
-    root.classList.toggle('dark');               // Add/remove .dark class
+    root.classList.toggle('dark');          
     const dark = root.classList.contains('dark');
 
     // Save preference
@@ -112,8 +109,6 @@ form.addEventListener("submit", (e) => {
     msg.textContent = "Thanks! Your message was sent.";
     form.reset();
 });
-
-
 // ============================
 // Scroll Reveal (Intersection Observer)
 // ============================
