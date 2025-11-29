@@ -1,12 +1,7 @@
-// ============================
-// Dynamic Year in Footer
-// ============================
 document.getElementById('year').textContent = new Date().getFullYear();
 
-
-// ============================
 // Dark Mode Toggle (with persistence)
-// ============================
+
 const toggle = document.getElementById('themeToggle');  
 const root = document.documentElement;                
 
@@ -28,9 +23,9 @@ toggle.addEventListener('click', () => {
     toggle.textContent = dark ? '☀️' : '🌙';
 });
 
-// ============================
+
 // Contact Form: extra validation + persistence
-// ============================
+
 const form = document.getElementById("contactForm");
 const msg = document.getElementById("msg");
 
@@ -109,9 +104,8 @@ form.addEventListener("submit", (e) => {
     msg.textContent = "Thanks! Your message was sent.";
     form.reset();
 });
-// ============================
+
 // Scroll Reveal (Intersection Observer)
-// ============================
 // Adds "in" class when elements with .reveal enter viewport
 const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -186,9 +180,8 @@ const io = new IntersectionObserver((entries) => {
 })();
 
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-// ============================
+
 // Experience: collapsible cards + persistence (unified)
-// ============================
 (function () {
     const timeline = document.querySelector("#experience .timeline");
     if (!timeline) return;
@@ -258,9 +251,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 })();
 
 
-// ====================
 // WEATHER API
-// ====================
 function getWeatherEmoji(code) {
     if (code === 0) return "☀️";                 // clear
     if ([1, 2, 3].includes(code)) return "⛅";     // cloudy
@@ -352,9 +343,8 @@ function getWeatherDescription(code) {
 document.addEventListener('DOMContentLoaded', fetchWeather);
 
 
-// ====================
+
 // JOKE/ADVICE API
-// ====================
 const newJokeBtn = document.getElementById('new-joke-btn');
 const jokeContent = document.getElementById('joke-content');
 const jokeError = document.getElementById('joke-error');
@@ -387,9 +377,7 @@ document.addEventListener('DOMContentLoaded', fetchJoke);
 // Fetch new joke on button click
 newJokeBtn.addEventListener('click', fetchJoke);
 
-// ====================
 // SMOOTH SCROLLING
-// ====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -404,9 +392,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ====================
 // PERFORMANCE OPTIMIZATION
-// ====================
 // Lazy load images if any are added
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -423,9 +409,9 @@ if ('IntersectionObserver' in window) {
     document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
     });
-}// ============================
+}
+
 // STATE: Show / Hide Experience
-// ============================
 
 const expBtn = document.getElementById('toggle-experience');
 const expSection = document.getElementById('experience');
@@ -449,15 +435,12 @@ expBtn.addEventListener('click', () => {
     renderExperience();
 });
 
-// ============================
 // WEATHER + INLINE TIMER
-// ============================
 
 const weatherDisplay = document.getElementById("weather-display");
 
 // ---- Weather + Emoji -----
 function updateWeather(temp, emoji) {
-    // لما يجهز الطقس، نرسم النص لأول مرة
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     const timeSpent =
